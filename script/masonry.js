@@ -6,7 +6,8 @@ const imgNumber = 30;
 //针对不同网页获取照片
 const url = new URL(location.href);
 const index = url.pathname.indexOf("_");
-const indexEnd = url.pathname.indexOf(".");
+// const indexEnd = url.pathname.indexOf(".");
+const indexEnd = url.pathname.length;
 const imgDate = url.pathname.slice(index + 1, indexEnd);
 
 
