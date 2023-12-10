@@ -1,0 +1,263 @@
+
+
+
+
+@font-face {
+    font-family: 'Neue Machina';
+    src: url('../font/ppneuemachina-regular-webfont.woff2') format('woff2'),
+         url('../font/ppneuemachina-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'Neue Machina';
+    src: url('../font/ppneuemachina-ultrabold-webfont.woff2') format('woff2'),
+         url('../font/ppneuemachina-ultrabold-webfont.woff') format('woff');
+    font-weight: bolder;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'Neue Machina';
+    src: url('../font/ppneuemachina-light-webfont.woff2') format('woff2'),
+         url('../font/ppneuemachina-light-webfont.woff') format('woff');
+    font-weight: light;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'Neue Machina';
+    src: url('../font/ppneuemachina-bold-webfont.woff2') format('woff2'),
+         url('../font/ppneuemachina-bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+
+* {
+    cursor: url(../image/cursor.png), default;
+    font-family: 'Neue Machina', sans-serif;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+::selection {
+    background-color: var(--selection);
+}
+
+a {
+    all: unset;
+    cursor: pointer;
+}
+
+a:link {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: line-through;
+    text-decoration-color: var(--text-dec);
+}
+
+main {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    display: flex;
+    gap: 3rem;
+    background-color: var(--background-color);
+}
+
+h2 {
+    font-size: 30px;
+}
+
+address {
+    font-style: normal;
+}
+
+.navul {
+    list-style: none;
+    font-size: 30px;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    position: sticky;
+    top: 0;
+    width: 160px;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
+    color: var(--text-color);
+}
+
+nav footer ,nav header{
+    padding: 2rem 0;
+    width: 200px;
+}
+
+header a img {
+    margin-bottom: 10px;
+    width: 160px;
+    height: 60px;
+    cursor: pointer;
+}
+
+
+.flexContent {
+    display: flex;
+    width: 100%;
+    padding: 2rem 0;
+    flex-direction: column;
+}
+
+.navToggle {
+    display: none;
+}
+
+header ul input {
+    width: 30px;
+    height: 15px;
+    cursor: pointer;
+    opacity: 0;
+}
+
+header ul span {
+    position: absolute;
+    left: 0;
+    bottom: 17px;
+    width: 30px;
+    height: 3px;
+    background-color: var(--background-color-invert);
+    pointer-events: none;
+    transition: .2s;
+}
+
+@media screen and (max-width: 1200px) {
+    main {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    nav footer ,nav header{
+        padding: 1rem 0;
+    }
+}
+
+@media screen and (max-width: 678px) {
+    main {
+        all: unset;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        background-color: var(--background-color);
+    }
+    .flexContent {
+        display: flex;
+        width: unset;
+        padding: 0 2rem;
+        flex-direction: column;
+    }
+    nav {
+        display: flex;
+        position: sticky;
+        width: unset;
+        height: unset;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1;
+        background-color: var(--background-color);
+    }
+    
+    nav header{
+        all: unset;
+        width: 100%;
+    }
+
+    nav footer {
+        display: none;
+    }
+    header a img {
+        padding: .6rem 1rem .3rem;
+
+    }
+    header a img {
+        margin-bottom: 0px;
+        width: 128px;
+    }
+
+    .navul {
+        position: absolute;
+        background-color: var(--background-color);
+        width: calc(100% - 2rem);
+        height: 0;
+        overflow: hidden;
+        padding: 0 1rem;
+    }
+
+    .navToggle input {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        opacity: 0;
+    }
+
+    .navToggle span {
+        position: absolute;
+        right: 5px;
+        width: 30px;
+        height: 3px;
+        background-color: var(--text-dec);
+        pointer-events: none;
+        transition: .2s;
+    }
+
+    .navToggle span:nth-child(2) {
+        top: calc(84.52px / 2 - 34px);
+    }
+
+    .navToggle span:nth-child(3) {
+        top: calc(84.52px / 2 - 24px);
+    }
+    
+    .navToggle span:nth-child(4) {
+        top: calc(84.52px / 2 - 14px);
+    }
+
+
+    .navToggle {
+        display: block;
+        position: absolute;
+        right: 1rem;
+        top: 22px;
+    }
+
+    header ul span {
+        left: 1rem;
+    }
+}
+
+@media screen and (max-height: 480px) {
+    nav footer {
+        display: none;
+    }
+}

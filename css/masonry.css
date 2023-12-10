@@ -1,0 +1,40 @@
+
+.masonry {
+    width: 100%;
+    margin: 2rem 0;
+    position: relative;
+}
+
+.masonry img {
+    position: absolute;
+    border-radius: 10px;
+    transition: .2s;
+    cursor: pointer;
+}
+
+.preview-container {
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.preview-container img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+}
+
+@media screen and (max-width: 1200px) {
+    .masonry {
+        margin: 1rem 0;
+    }
+}
+
+@media screen and (max-width: 678px) {
+    .masonry {
+        margin: 0;
+    }
+}

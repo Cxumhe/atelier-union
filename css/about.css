@@ -1,0 +1,112 @@
+
+nav header ul li:nth-child(3) {
+    color: var(--link-active);
+}
+
+section {
+    display: flex;
+    margin-bottom: 2rem;
+    flex-direction: row;
+    column-gap: 1rem;
+    color: var(--text-color);
+}
+
+section .aside {
+    min-width: 256px;
+    width: 33.33333%;   /*三分之一*/
+    flex-shrink: 0;
+}
+
+section .aside h2 {
+    font-size: 24px;
+    position: sticky;
+    top: 1rem;
+}
+
+section .content {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+section .content ul {
+    list-style-position: inside;
+}
+
+section .teamMember {
+    display: grid;
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    gap: 1rem;
+}
+
+section .content .teamMember img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+section .content .teamMember .member{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+section .content .teamMember .member .shell h3{
+    font-size: 16px;
+    margin-top: 0.2rem;
+}
+
+section .content .teamMember .member .shell ul{
+    list-style: none;
+}
+
+section .content .teamMember .member .shell {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+section footer {
+    display: none;
+}
+
+section:last-child {
+    margin-bottom: 0;
+}
+
+section:nth-last-child(2) {
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 1200px) {
+    main .flexContent {
+        padding: 1rem 0;
+    }
+    section .content .teamMember {
+        grid-template-columns: repeat(1,minmax(0,1fr));
+    }
+}
+
+@media screen and (max-width: 960px) {
+    section {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 678px) {
+    main .flexContent {
+        padding: 0 1rem;
+    }
+    section:last-child {
+        margin-bottom: 1rem;
+    }
+    section:nth-last-child(2) {
+        margin-bottom: 2rem;
+    }
+    section footer {
+        display: block;
+    }
+}
+
+

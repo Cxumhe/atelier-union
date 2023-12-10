@@ -1,0 +1,22 @@
+/* 暗色主题 */
+html[data-theme='dark'] {
+    --background-color: black;
+    --background-color-invert: white;
+    --text-color: white;
+    --link: white;
+    --link-active: #fd0;
+    --selection: #fd0;
+    --text-dec: #fd0;
+}
+
+
+/* 默认亮色主题 */
+:root {
+    --background-color: white;
+    --background-color-invert: black;
+    --text-color: black;
+    --link: black;
+    --link-active: #fd0;
+    --selection: #fd0;
+    --text-dec: #fd0;
+}

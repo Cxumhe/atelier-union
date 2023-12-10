@@ -1,0 +1,109 @@
+
+.flexContent {
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color);
+}
+
+article {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+}
+
+.slogan {
+    font-style: italic;
+    position: relative;
+    right: 100px;
+}
+
+.sloganTranslate {
+    position: relative;
+    left: 100px;
+}
+
+.slogan {
+    border-right: 2px solid var(--text-color);
+    width: 454px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.animation {
+    animation: grow 4s steps(45) 1s normal both,
+    blink 0s steps(45) 5s normal forwards;
+}
+
+@keyframes grow {
+    from {
+        width: 0;
+    }
+    to {
+        width: 454px;
+    }
+}
+
+@keyframes blink {
+    from {
+        border-right-color: var(--text-color);
+    }
+    to {
+        border-right-color: transparent;
+    }
+}
+
+.sloganTranslate {
+    border-right: 2px solid transparent;
+    white-space: nowrap;
+    width: 246px;
+    overflow: hidden;
+}
+
+.animation1 {
+    animation: grow1 2s steps(13) 5s normal both,
+    blink1 0s 5s normal both,
+    blink2 700ms 7s infinite normal;
+}
+
+@keyframes grow1 {
+    from {
+        width: 0;
+    }
+    to {
+        width: 246px;
+    }
+}
+
+@keyframes blink1 {
+    from {
+        border-right-color: transparent;
+    }
+    to {
+        border-right-color: var(--text-color);
+    }
+}
+
+@keyframes blink2 {
+    from {
+        border-right-color: var(--text-color);
+    }
+    to {
+        border-right-color: transparent;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .flexContent {
+        height: calc(100vh - 79.72px);
+    }
+    
+    .slogan {
+        right: 0px;
+    }
+    
+    .sloganTranslate {
+        left: 0px;
+    }
+}
