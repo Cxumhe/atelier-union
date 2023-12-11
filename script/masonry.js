@@ -1,22 +1,30 @@
 const divContainer = document.querySelector(".masonry");
 const imgWidth = 250;
-const imgNumber = 30;
+// const imgNumber = 30;
 
 
 //针对不同网页获取照片
 const url = new URL(location.href);
-const index = url.pathname.indexOf("_");
+const index = url.pathname.lastIndexOf("/");
 // const indexEnd = url.pathname.indexOf(".");
 const indexEnd = url.pathname.length;
-const imgDate = url.pathname.slice(index + 1, indexEnd);
+const imgDate = url.pathname.slice(index + 1, indexEnd).replace("_", ".");
 
-
+fetch(`../image/gallery/${imgDate}/info.json`)
+    .then((Response) => Response.json())
+    .then((json) => {
+        const info = json;
+        // console.log(info);
+        return info;
+    })
+    .then(createImgs)
+    .then(preview);
 
 // 加入图片
-function createImgs() {
+function createImgs(info) {
 
-    for(let i = 1; i <= imgNumber; i++) {
-        let src = '../image/gallery/8.' + imgDate + '/compressed/IMG_ (' + i + ').jpg';
+    for(let i = 1; i <= info.imgNumber; i++) {
+        let src = '../image/gallery/' + imgDate + '/compressed/IMG_ (' + i + ').jpg';
         let img = document.createElement("img");
         let alt = '';
         img.alt = alt;
@@ -27,7 +35,7 @@ function createImgs() {
     }
 }
 
-createImgs();
+// createImgs();
 
 // 计算一共有多少列，以及每一列之间的间隙
 function cal() {
@@ -80,9 +88,9 @@ window.onresize = function() {
 
 
 // 图片预览功能实现
-
-for(let img of document.querySelectorAll(".masonry img")) {
-    img.addEventListener("click", () => {
+function preview() {
+    for(let img of document.querySelectorAll(".masonry img")) {
+        img.addEventListener("click", () => {
         let container = document.createElement("div");
         container.classList.add("preview-container");
         container.onclick = function() {
@@ -112,6 +120,8 @@ for(let img of document.querySelectorAll(".masonry img")) {
         container.appendChild(innerImg);
 
         document.body.appendChild(container);
-    })
+        })
+    }
 }
+
 
