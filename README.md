@@ -25,6 +25,10 @@ The official website of us.
 ## 更新日志
 
 ### Release 1.01
+⚙️**优化**
+- 主题随系统OS改变
+- 优化gallery图片响应速度
+### Release 1.01
 📜**内容修改**
 - 修改about页面
     - For Dove
