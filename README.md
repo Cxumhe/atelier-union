@@ -18,15 +18,15 @@ The official website of us.
 |不同页面图片获取|✅|
 |图片预览|✅|
 |主题切换|✅|
-|主题随系统OS改变||
-|优化图片适配||
+|主题随系统OS改变|✅|
+|优化图片适配|✅|
 
 
 ## 更新日志
 
 ### Release 1.01
 📜**内容修改**
-- 修改works页面
+- 修改about页面
     - For Dove
 
 🐛**Bug Fix**

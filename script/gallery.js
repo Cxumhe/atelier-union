@@ -1,20 +1,17 @@
 
-
 window.onload = function () {
-    for(let a of document.querySelectorAll("article > a")) {
-        let photoMove = a.firstElementChild;
-        let url = a.href;
-        // console.log(url);
-
-        const index = url.indexOf("pages");
-        // const indexEnd = url.lastIndexOf(".");
-        const indexEnd = url.length;
-        let src = url.slice(index + 6, indexEnd).replace("_", ".");
+    for(let a of document.querySelectorAll("article > a picture")) {
+        let photoMove = a.querySelector("img");
+        // console.log(photoMove);
         photoMove.addEventListener("mouseover", () => {
-            photoMove.src = '../image/gallery/' + src + '/cover.gif';
+            a.children[0].srcset = a.children[0].srcset.replace("_480w.jpg", ".gif");
+            a.children[1].srcset = a.children[1].srcset.replace("_800w.jpg", ".gif");
+            photoMove.src = photoMove.src.replace("jpg", "gif");
         })
         photoMove.addEventListener("mouseout", () => {
-            photoMove.src = '../image/gallery/' + src + '/cover.jpg';
+            a.children[0].srcset = a.children[0].srcset.replace(".gif", "_480w.jpg");
+            a.children[1].srcset = a.children[1].srcset.replace(".gif", "_800w.jpg");
+            photoMove.src = photoMove.src.replace("gif", "jpg");
         })
     }
 

@@ -53,13 +53,44 @@ window.onresize = function() {
     }
 }
 
-themeToggle.addEventListener("change", () => {
-    if(themeToggle.checked) {
-        html.setAttribute('data-theme', 'dark');
-        logo.src = logo.src.replace('.svg', '_white.svg');
-    } else {
-        html.removeAttribute('data-theme');
-        logo.src = logo.src.replace('_white.svg', '.svg');
+function themeChange() {
+    function changeDarkTheme() {
+        if(html.getAttribute('data-theme') !== 'dark') {
+            html.setAttribute('data-theme', 'dark');
+            logo.src = logo.src.replace('.svg', '_white.svg');
+        }
     }
-})
 
+    function changeLightTheme() {
+        if(html.getAttribute('data-theme') !== 'white') {
+            html.setAttribute('data-theme', 'white');
+            logo.src = logo.src.replace('_white.svg', '.svg');
+        }
+    }
+
+    themeToggle.addEventListener("change", () => {
+        if(html.getAttribute('data-theme') === 'white') {
+            changeDarkTheme();
+        } else {
+            changeLightTheme();
+        }
+    })
+
+    const themeMedia = window.matchMedia("(prefers-color-scheme: light)");
+
+    if(themeMedia.matches) {
+        changeLightTheme();
+    } else {
+        changeDarkTheme();
+    }
+
+    themeMedia.addEventListener("change", (e) => {
+        if(e.matches) {
+            changeLightTheme();
+        } else {
+            changeDarkTheme();
+        }
+    })
+}
+
+themeChange();
