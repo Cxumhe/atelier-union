@@ -56,6 +56,10 @@
     padding: 0;
 }
 
+:root {
+    background-color: var(--background-color);
+}
+
 ::selection {
     background-color: var(--selection);
 }
@@ -80,7 +84,6 @@ main {
     padding-right: 2rem;
     display: flex;
     gap: 3rem;
-    background-color: var(--background-color);
 }
 
 h2 {
@@ -167,7 +170,6 @@ header ul span {
         display: flex;
         flex-direction: column;
         gap: 0;
-        background-color: var(--background-color);
     }
     .flexContent {
         display: flex;
