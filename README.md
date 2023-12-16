@@ -13,7 +13,7 @@
 
 [cxumhe.top](https://cxumhe.top)
 
-Release v1.02
+Release v1.03
 
 The official website of us.
 ## 实现
@@ -33,11 +33,11 @@ The official website of us.
 
 ## 更新日志
 
-### Release v1.02
+### Release v1.03
 🐛**Bug Fix**
 - 修复了navbar在切换主题时慢一拍会有过渡的bug
 - 修复了手机端主题切换黑色主题有空白的bug
-### Release v1.01
+### Release v1.02
 ⚙️**优化**
 - 主题随系统OS改变
 - 优化gallery图片响应速度
