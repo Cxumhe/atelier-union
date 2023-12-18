@@ -29,6 +29,7 @@ The official website of us.
 |主题切换|✅|
 |主题随系统OS改变|✅|
 |优化图片适配|✅|
+|使用新图片格式webp||
 
 
 ## 更新日志

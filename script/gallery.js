@@ -4,14 +4,14 @@ window.onload = function () {
         let photoMove = a.querySelector("img");
         // console.log(photoMove);
         photoMove.addEventListener("mouseover", () => {
-            a.children[0].srcset = a.children[0].srcset.replace("_480w.jpg", ".gif");
-            a.children[1].srcset = a.children[1].srcset.replace("_800w.jpg", ".gif");
-            photoMove.src = photoMove.src.replace("jpg", "gif");
+            a.children[0].srcset = a.children[0].srcset.replace("_480w.webp", "GIF.webp");
+            a.children[1].srcset = a.children[1].srcset.replace("_800w.webp", "GIF.webp");
+            photoMove.src = photoMove.src.replace(".webp", "GIF.webp");
         })
         photoMove.addEventListener("mouseout", () => {
-            a.children[0].srcset = a.children[0].srcset.replace(".gif", "_480w.jpg");
-            a.children[1].srcset = a.children[1].srcset.replace(".gif", "_800w.jpg");
-            photoMove.src = photoMove.src.replace("gif", "jpg");
+            a.children[0].srcset = a.children[0].srcset.replace("GIF.webp", "_480w.webp");
+            a.children[1].srcset = a.children[1].srcset.replace("GIF.webp", "_800w.webp");
+            photoMove.src = photoMove.src.replace("GIF.webp", ".webp");
         })
     }
 

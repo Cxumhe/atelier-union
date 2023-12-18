@@ -24,7 +24,7 @@ fetch(`../image/gallery/${imgDate}/info.json`)
 function createImgs(info) {
 
     for(let i = 1; i <= info.imgNumber; i++) {
-        let src = '../image/gallery/' + imgDate + '/compressed/IMG_ (' + i + ').jpg';
+        let src = '../image/gallery/' + imgDate + '/compressed/IMG_ (' + i + ').webp';
         let img = document.createElement("img");
         let alt = '';
         img.alt = alt;
