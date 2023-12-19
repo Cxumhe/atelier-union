@@ -1,6 +1,9 @@
 
 window.onload = function () {
-    for(let a of document.querySelectorAll("article > a picture")) {
+    // 由于加载性能和效果问题，手机就不加载gif了
+    // 正则匹配终端
+    if(!/Mobi|Android|iPhone|iPad/i.test(navigator.userAgent)) {
+        for(let a of document.querySelectorAll("article > a picture")) {
         let photoMove = a.querySelector("img");
         // console.log(photoMove);
         photoMove.addEventListener("mouseover", () => {
@@ -14,5 +17,5 @@ window.onload = function () {
             photoMove.src = photoMove.src.replace("GIF.webp", ".webp");
         })
     }
-
+    }
 }
