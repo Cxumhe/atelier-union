@@ -93,21 +93,6 @@ function preview() {
         img.addEventListener("click", () => {
         let container = document.createElement("div");
         container.classList.add("preview-container");
-        // 点击后触屏平台终止默认行为
-        container.ontouchmove = function (e) {
-            e.preventDefault();
-            // 倒数两个数
-            const width = getComputedStyle(innerImg).width.slice(0, -2);
-            const height = getComputedStyle(innerImg).height.slice(0, -2);
-            
-            if(e.deltaY < 0) {
-                innerImg.style.width = parseInt(width) * 1.2 + "px";
-                innerImg.style.height = parseInt(height) * 1.2 + "px";
-            } else if (e.deltaY > 0 && width > 200) {
-                innerImg.style.width = parseInt(width) * 0.8 + "px";
-                innerImg.style.height = parseInt(height) * 0.8 + "px";
-            }
-        }
         container.onclick = function() {
             container.remove();
         }
