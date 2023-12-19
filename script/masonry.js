@@ -6,8 +6,8 @@ const imgWidth = 250;
 //针对不同网页获取照片
 const url = new URL(location.href);
 const index = url.pathname.lastIndexOf("/");
-const indexEnd = url.pathname.indexOf(".");
-// const indexEnd = url.pathname.length;
+// const indexEnd = url.pathname.indexOf(".");
+const indexEnd = url.pathname.length;
 const imgDate = url.pathname.slice(index + 1, indexEnd).replace("_", ".");
 
 fetch(`../image/gallery/${imgDate}/info.json`)
@@ -100,10 +100,10 @@ function preview() {
             const width = getComputedStyle(innerImg).width.slice(0, -2);
             const height = getComputedStyle(innerImg).height.slice(0, -2);
             
-            if(e.deltaY > 0) {
+            if(e.deltaY < 0) {
                 innerImg.style.width = parseInt(width) * 1.2 + "px";
                 innerImg.style.height = parseInt(height) * 1.2 + "px";
-            } else if (e.deltaY < 0 && width > 200) {
+            } else if (e.deltaY > 0 && width > 200) {
                 innerImg.style.width = parseInt(width) * 0.8 + "px";
                 innerImg.style.height = parseInt(height) * 0.8 + "px";
             }
