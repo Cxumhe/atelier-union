@@ -48,9 +48,19 @@
 }
 
 
+@font-face {
+    font-family: 'microsoft_yahei_uiregular';
+    src: url('microsoft_yahei_ui-webfont.woff2') format('woff2'),
+         url('microsoft_yahei_ui-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
 * {
     cursor: url(../image/cursor.png), default;
-    font-family: 'Neue Machina', sans-serif;
+    font-family: 'Neue Machina', 'Ya Hei', sans-serif;
     font-weight: bold;
     margin: 0;
     padding: 0;
