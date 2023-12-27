@@ -49,10 +49,10 @@
 
 
 @font-face {
-    font-family: 'microsoft_yahei_uiregular';
+    font-family: 'microsoft yahei';
     src: url('../font/microsoft_yahei_ui-webfont.woff2') format('woff2'),
          url('../font/microsoft_yahei_ui-webfont.woff') format('woff');
-    font-weight: normal;
+    font-weight: bold;
     font-style: normal;
 
 }
@@ -60,8 +60,9 @@
 
 * {
     cursor: url(../image/cursor.png), default;
-    font-family: 'Neue Machina', 'microsoft_yahei_uiregular', sans-serif;
+    font-family: 'Neue Machina', 'microsoft yahei', sans-serif;
     font-weight: bold;
+    font-style: normal;
     margin: 0;
     padding: 0;
 }
