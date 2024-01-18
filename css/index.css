@@ -26,14 +26,14 @@ article {
 
 .slogan {
     border-right: 2px solid var(--text-color);
-    width: 454px;
+    width: 283px;
     white-space: nowrap;
     overflow: hidden;
 }
 
 .animation {
-    animation: grow 4s steps(45) 1s normal both,
-    blink 0s steps(45) 5s normal forwards;
+    animation: grow 4s steps(27) 1s normal both,
+    blink 0s steps(27) 5s normal forwards;
 }
 
 @keyframes grow {
@@ -41,7 +41,7 @@ article {
         width: 0;
     }
     to {
-        width: 454px;
+        width: 283px;
     }
 }
 
@@ -57,7 +57,7 @@ article {
 .sloganTranslate {
     border-right: 2px solid transparent;
     white-space: nowrap;
-    width: 246px;
+    width: 143px;
     overflow: hidden;
 }
 
@@ -72,7 +72,7 @@ article {
         width: 0;
     }
     to {
-        width: 246px;
+        width: 143px;
     }
 }
 
